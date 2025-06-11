@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+#display {
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: yellow;
+  border-style: none;
+  border-radius: 10px;
+}
+
+#laps {
+  list-style-type: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+#laps li {
+  background: #333;
+  padding: 10px;
+  margin-top: 5px;
+}
