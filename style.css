@@ -6,10 +6,19 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0;
+  padding: 20px;
+  overflow: hidden; /*Prevent page scroll*/
 }
 
 .container {
   text-align: center;
+  width: 100%;
+  max-width: 400px;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #display {
@@ -22,19 +31,27 @@ body {
   margin: 5px;
   font-size: 16px;
   cursor: pointer;
-  background-color: yellow;
   border-style: none;
   border-radius: 10px;
+  background-color: yellow;
 }
 
+
+
 #laps {
-  list-style-type: none;
-  margin-top: 20px;
-  padding: 0;
+  /* margin-top: 25px; */
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  background: #1e1e1e;
+  border-radius: 10px;
+  height: 200px; /* Fixed height */
+  overflow-y: auto; /* Scrollbar appears if there are many laps */
 }
 
 #laps li {
+  padding: 8px;
+  margin: 5px 0;
   background: #333;
-  padding: 10px;
-  margin-top: 5px;
+  border-radius: 5px;
 }

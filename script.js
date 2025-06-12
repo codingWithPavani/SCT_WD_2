@@ -30,12 +30,19 @@ function stopwatch() {
   updateDisplay();
 }
 
+pauseBtn.style.display = "none";
+resumeBtn.style.display = "none";
+resetBtn.style.display = "none";
+lapBtn.style.display = "none";
+
 // Start
 startBtn.onclick = () => {
   timer = setInterval(stopwatch, 1000);
   isRunning = true;
   startBtn.style.display = "none";
-  resumeBtn.style.display = "none";
+  pauseBtn.style.display = "inline-block";
+  resetBtn.style.display = "inline-block";
+  lapBtn.style.display = "inline-block";
 };
 
 // Pause
@@ -43,6 +50,8 @@ pauseBtn.onclick = () => {
   clearInterval(timer);
   isRunning = false;
   resumeBtn.style.display = "inline-block";
+  pauseBtn.style.display = "none";
+  lapBtn.style.display = "none";
 };
 
 // Resume
@@ -51,6 +60,10 @@ resumeBtn.onclick = () => {
     timer = setInterval(stopwatch, 1000);
     isRunning = true;
     resumeBtn.style.display = "none";
+    pauseBtn.style.display = "inline-block";
+    lapBtn.style.display = "inline-block"
+    
+    
   }
 };
 
@@ -61,7 +74,11 @@ resetBtn.onclick = () => {
   isRunning = false;
   updateDisplay();
   startBtn.style.display = "inline-block";
-  resumeBtn.style.display = "none";
+  pauseBtn.style.display = "none";
+  resetBtn.style.display = "none";
+  lapBtn.style.display = "none";
+  
+
   lapsList.innerHTML = "";
 };
 
